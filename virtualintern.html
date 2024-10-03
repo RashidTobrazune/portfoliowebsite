@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Netflix Dataset</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<link rel="icon" href="images/rsign.png">
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="virtualintern.html" class="logo"><strong>Rashid</strong> <span> Tobrazune.</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="landing.html">Projects</a></li>
+				<li><a href="rashprof.html">my proflie</a></li>
+				<!--<li><a href="elements.html">Elements</a></li>-->
+			</ul>
+			<!--<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>-->
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1 style="color: #b1d0d0;">KPMG AU Data <br> Analytics</h1>
+					</header>
+					<span class="image main"><img src="images/kpmgcopy.png" alt="kpmg Image" /></span>
+					<p>Sprocket Central Pty Ltd, a medium size bikes & cycling accessories organisation, approached me
+						in KPMG’s Lighthouse & Innovation Team. Sprocket Central Pty Ltd is keen to learn more about
+						KPMG’s expertise in its Analytics, Information & Modelling team.
+
+						Particularly, I speak about how the team can effectively analyse the datasets to help Sprocket
+						Central Pty Ltd grow its business.
+
+						Primarily, Sprocket Central Pty Ltd needs help with its customer and transactions data. The
+						organisation has a large dataset relating to its customers, but their team is unsure how to
+						effectively analyse it to help optimise its marketing strategy.
+
+						However, in order to support the analysis, you speak to the Associate Director for some ideas
+						and she advised that <b>“the importance of optimising the quality of customer datasets cannot be
+							underestimated. The better the quality of the dataset, the better chance you will be able to
+							use it drive company growth.”</b>
+
+						The client provided KPMG with 3 datasets:
+
+						Customer Demographic
+						Customer Addresses
+						Transactions data in the past 3 months
+						I decided to start the preliminary data exploration and identify ways to improve the quality of
+						Sprocket Central Pty Ltd’s data.</p>
+
+					<p></p>
+				</div>
+				<div class="row rmarg">
+					<div class="col-4 col-12-medium">
+						<h3>Goal</h3>
+						<p>There were 3 goals in all. The first was to draft an email to the client identifying <b>data
+								quality issues</b> and strategies to
+							<b>mitigate them</b>.<br>
+							The second was to develop a presentation that outlines the approach in targeting new
+							customers based on demographics and other attributes.<br>
+							The last was to Create a dashboard for the client that specifies who they should be
+							targeting in their customer list as well as the broader market segment.
+						</p>
+					</div>
+					<div class="col-4 col-12-medium">
+						<h3>Results</h3>
+						<p>The report provides actionable recommendations and next steps, supported by solid reasoning.
+							It enables informed decision-making, and process improvement.</p>
+					</div>
+					<div class="col-4 col-12-medium">
+						<h3>What I learnt</h3>
+						<p>1. The importance of optimising data quality of customer dataset.<br>
+							2. How to target high value customers based on customer demographics and attributes.<br>
+							3. How visualisations such as interactive dashboards help highlight key findings and convey
+							ideas in a succinct manner.</p>
+					</div>
+				</div>
+				<div class="inner">
+					<p>
+					<h3 id="casest">Case Procedure</h3>
+					<hr class="thinline"> <br />
+					<h4>1. Data Cleaning</h4>
+					<h5>Data quality issues and mitigation</h5>
+					Throughout the data analysis process, I encountered certain data quality issues and implemented
+					strategies to address them effectively. Additionally, I provided recommendations to prevent these
+					issues from recurring, thereby enhancing the accuracy of the data used for making informed business
+					decisions.
+
+
+
+					1. Customer IDs were found in the 'Transactions' and 'Customer Address' tables that were not present
+					in the Customer Demographic' table.
+					Mitigation: To maintain consistency, ensure that all tables correspond to the same period, and only
+					customers listed in the 'Customer Master' will be used for model training.<br>
+					2. Some records contain empty values in columns like brand of purchase or job title.
+					Mitigation: Records with a small number of empty fields are filtered out from the training set;
+					otherwise, imputation is performed based on the training dataset distribution. <br>
+
+					3. Inconsistent values were observed for the same attribute, such as "QUEENSLAND" represented as
+					"QLD”.
+					Mitigation: Regular expressions were employed to standardize these values for consistency.
+					Recommendation: Implement drop-down lists for data entry to prevent multiple representations of the
+					same value. <br>
+					4. Gender records labeled as 'U' were replaced with “UNIDENTIFIED”.<br>
+					5. Date format were also not same for most. Mitigation: the date format should always be one
+					format.<br>
+					6. Inconsistent data types were identified for the same attribute, with some fields as numeric
+					values and others as strings.
+					Mitigation: Selected records were converted from characters to numeric, and non-numeric characters
+					were removed from strings.
+					<br>
+					Recommendation: Ensure that fact tables in the database enforce data type constraints to maintain
+					consistency.
+					Moving forward, our team will continue with data cleaning, standardization, and transformation for
+					model analysis.
+
+					</p>
+					<p>
+					<h4>2. Data Exploration and Analyzing</h4>
+					a. Calculating and examining summary statistics to understand the central tendency and distribution
+					of data.
+					<br>
+					Univariate and Bivariate Analysis: Analyzing individual variables and exploring relationships
+					between pairs of variables.
+					<br>
+					Feature Engineering: Creating new variables or transforming existing ones to enhance the model's
+					predictive power.
+					<br>
+					Data Segmentation: Grouping data based on certain criteria to uncover patterns within specific
+					subsets.<br>
+					<br> Considering the correlation between independent variables like age and tenure, where
+					individuals in older age brackets may exhibit a longer tenure. This process aims to understand how
+					variables interrelate and to identify potential correlations that could impact the analysis.
+
+					</p>
+					<p>
+					<h4>3. Data Visualiztion:</h4>
+					After building the model we need to present our results back to the client. Visualisations such as
+					interactive dashboards often help us highlight key findings and convey our ideas in a more succinct
+					manner.
+					In Power BI and Excel,
+					I created graphical representations of the dataset to make it more accessible, reveal patterns, and
+					communicate the findings effectively.
+					</p>
+
+					<p>
+					<h4> Asking Right Questions:</h4> After analyzing the dataset involves asking various questions to
+					extract valuable insights based on <br>customers demographics and other attributes.<br>
+
+
+
+					</p>
+					<p>
+					<h5> Interactive Dashboard</h5>
+					<img src="images/sprocket.png" alt="sprocket  image" class="image main">
+					<img src="images/sprocketdash.png" alt="Dashboard image" class="image main"><br />
+					The visualization dashboard crafted for the client serves as a comprehensive guide for targeted
+					customer engagement and market segmentation. With 3,999 customers in focus, the dashboard
+					encapsulates key insights:
+
+					Total Revenue: Displaying a total revenue of $2,000,000 provides a clear understanding of the
+					financial scope.<br>
+
+					Brand Distribution: A breakdown of the seven brands allows the client to discern which brands
+					contribute most significantly to revenue and customer engagement.<br>
+
+					Gender Demographics: Highlighting the gender distribution among customers reveals that there are
+					more female customers than males, offering valuable insights for tailored marketing strategies.<br>
+
+					Regional Distribution: New South Wales emerges as the region with the highest customer
+					concentration, enabling the client to refine targeting strategies for this particular market.<br>
+
+					This visually intuitive dashboard empowers the client to make informed decisions, identify lucrative
+					market segments, and optimize their approach for enhanced customer engagement and revenue
+					generation.<br>
+					<img src="images/10valuecustomers.png" alt="10 customer image" class="image main"><br />
+					<img src="images/customername.png" alt="10 Customer image" class="image main"><br />
+					In analyzing the dataset, a focus on the top 10 high-value customers unveils critical insights for strategic decision-making. These customers, characterized by their significant contribution to revenue, represent a lucrative segment deserving special attention.
+					<br>Exploring the demographics of these top customers, such as gender, age, or location, enables the client to tailor marketing campaigns more precisely.
+					By focusing on the top 10 high-value customers, the client can strategically allocate resources, and enhance customer satisfaction, ultimately driving sustained revenue growth.
+					<br />And with that, I conclude this exercise. As mentioned earlier, this was a valuable opportunity
+					to assess and enhance my skills. Thank you for your engagement.
+
+					</p>
+				</div>
+
+			</section>
+
+		</div>
+
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form action="//formsubmit.co/a4f5568d11b2cff550a77f3574a67d90" method="POST">
+						<input name="_next" type="hidden"
+							value="https://rashidproject.000webhostapp.com/appreciation.html">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="#">tobrazunerashid@gmail.com</a>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-phone"></span>
+							<h3>Phone</h3>
+							<span>(+233) 054-694-9160</span>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>Brofoyedru, AD240<br />
+								Kwabre East, Ashanti<br />
+								Ghana.</span>
+						</div>
+					</section>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<!--<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>-->
+					<li><a href="https://github.com/RashidTobrazune" class="icon brands alt fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/rashid-tobrazune"
+							class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; All Rights Reserved.2023.</li>
+					<li>Design: <a href="rashprof.html">Awudu Seidu Rashid Tobrazune</a></li>
+				</ul>
+				<div class="footericon">
+					<a href="#"><img src="images/upvote.svg" width="20" height="20"></a>
+					<!--<span class="animate scrolla" style="--i:13;"></span>-->
+				</div>
+
+			</div>
+
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

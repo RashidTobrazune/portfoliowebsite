@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Netflix Dataset</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+    <link rel="icon" href="images/rsign.png">
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="netflixpart.html" class="logo"><strong>Rashid</strong> <span> Tobrazune.</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="landing.html">Projects</a></li>
+				<li><a href="rashprof.html">my proflie</a></li>
+				<!--<li><a href="elements.html">Elements</a></li>-->
+			</ul>
+			<!--<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>-->
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1 style="color: #b1d0d0;">Netflix Data <br>Cleaning and Analysis</h1>
+					</header>
+					<span class="image main"><img src="images/netflixresize.png" alt="Netflix Image" /></span>
+					<p>Netflix is a popular streaming service that offers a vast catalog of movies, TV shows, and
+						original contents.The data consist of contents added to Netflix approximately from 1960 to 2021.
+						I retreived the dataset free from an online data community platform <i>kaggle.</i> This dataset
+						was cleaned with <b>MySQL</b> and visualized with <b>Power BI </b>. The purpose of this dataset
+						was to test my <b>data cleaning</b> and <b>visualization</b> skills.</p>
+
+					<p></p>
+				</div>
+				<div class="row rmarg">
+					<div class="col-4 col-12-medium">
+						<h3>Goal</h3>
+						<p>The goal was to clean and visualize the dataset to provide relevant insights, asking the
+							right questions and analyzing the data for better decision-making.</p>
+					</div>
+					<div class="col-4 col-12-medium">
+						<h3>Results</h3>
+						<p>The report provides actionable recommendations and next steps, supported by solid reasoning.
+							It enables informed decision-making, and process improvement.</p>
+					</div>
+					<div class="col-4 col-12-medium">
+						<h3>Skill Utilization</h3>
+						<p>This project demonstrates a robust skill utilization, where SQL was used for data preparation and transformation, while Power BI was employed for data visualization and deriving meaningful insights. The seamless integration of these skills contributed to a comprehensive and actionable data analysis for this dataset.</p>
+					</div>
+				</div>
+				<div class="inner">
+					<p>
+					<h3 id="casest">Case Procedure</h3>
+					<hr class="thinline"> <br />
+					<h4>1. Data Cleaning</h4>
+					I performed several important data preparation and transformation steps when analyzing this Netflix
+					dataset using SQL commands with MySQL.<br /> Let's break down some part of what I did:<br /><br />
+
+
+					a. Treated Duplicates: Duplicates in the data could have skewed the analysis. I used <b>'HAVING'</b>
+					and <b>'COUNT'</b> statements<br /> to identify and remove duplicate rows based on one or more
+					columns.<br />
+					<!--<img src="images/dupli.jpg" alt="Duplicates statement image">--><br />
+
+
+					b. Treated Nulls: Handling null values is crucial. I used the <b>'IS NULL'</b> and <b>'FILTER'</b>
+					statement to identify<br /> and potentially replace null values in the dataset. <br />
+					<br />
+					c. Populated Missing Rows: I created and populated missing rows to ensure the dataset is complete
+					and accurate. <br />I used some statements like <b>'UPDATE'</b>, <b>'SET</b>, <b>'WHERE'</b> to
+					insert missing data, replacing unambiguous values with 'Not given'.<br />
+					It helped me assessed the quality of the dataset by checking for inconsistencies, data entry errors
+					that might affect the integrity of the data.
+
+					</p>
+					<p>
+					<h4>2. Data Exploration and Analyzing</h4>
+					a. Using COUNTROWS and FILTER in DAX: In Power BI, I used the basic DAX language to create custom
+					calculations and measures. I used <b>'COUNTROWS'</b> function to count the number of rows in a table
+					or a table expression, and <b>'FILTER'</b> for filtering data based on specified conditions. I
+					performed more calculations and filter data as needed for the analysis.
+					<br /><br />
+					It is important to note that a typical data analysis process involves several other steps, such as
+					data exploration, data visualization, and deriving insights.
+					I applied transformations, such as scaling numerical features, and creating new measures based on
+					domain knowledge.
+
+					</p>
+					<p>
+					<h4>3. Data Visualiztion:</h4>
+					In Power BI,
+					I created graphical representations of the dataset to make it more accessible, reveal patterns, and
+					communicate the findings effectively. I used line charts, bar charts, Map, tree map, and pie chart.
+					</p>
+
+					<p>
+						<h4> Asking Right Questions:</h4> Analyzing a Netflix dataset involves asking various questions to extract valuable insights. <br>Here are some key questions I asked myself to guide my analysis:<br>
+
+						What are the most prevalent genres and categories of content on Netflix?<br>
+						Which directors or producers have the most content available on the platform?<br>
+						What is the distribution of content based on release year?<br>
+						Can we identify target demographics for specific types of content?<br>
+						Demographics with highest movies on netflix.<br>
+						Which  viewer ratings has the highest content or popularity scores?<br>
+						Are there specific genres that tend to lower content?<br>
+
+
+					</p>
+					<p>
+					<h5>1. Percentage of Movietype on Netflix</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/perctmovie.png" alt="Movietype percentage image"  class="image main"><br />
+					This Pie chart shows the percentage of contents(Movie and Tv Show) posted on netflix.
+
+					<h5>2(a). Number of Content(Movie and Tv show) added by Country on Netflix</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/geomap.png" alt="Movietype percentage image" class="image main"><br />
+					This Geographical map shows the the total amount of Movies and Tv shows per country.
+					This can be noted by the size of the coloured circle(red) in the map.
+					We can see that United States of America has the largest size, followed by India and United
+					Kingdom.<br><br/>
+
+
+
+					<h5>2(b). Number of Content(Movie and Tv show) added by country on Netflix</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/contbycoun.png" alt="Movietype percentage image" class="image main"><br />This bar chart is similar to the given information at 2(a).
+					It is an alternate better view of the geographical map.<br><br>
+
+
+					<h5>2(c). Number of Movie and Tv Show added by country on Netflix</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/movaddcoutv.png" alt="Movietype percentage image" class="image main"><br />This bar chart gives a more detailed information at 2(b) by specificing
+					content type added by each country. We can see that Pakistan added more Tv shows than Movies.<br><br>
+
+					<h5>3. Number of Content added through the years on Netflix</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/moviereleyr.png" alt="Movietype percentage image" class="image main"><br />
+					This chart shows that for almost a decade, the number of content added to Netflix varies each year,
+					either increasing or decreasing.
+					In 2018, 1146 content were added and it decreased to 592 in 2021.
+					It also shows the year with most contents, which was 2018.
+					Slicers could have been used to filter for content added per month if it was given in dataset.
+					<br><br>
+
+					<h5> 3(a). Number of Movie and Tv show added through the years on Netflix</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/typeaddyr.png" alt="Movietype percentage image" class="image main"><br />
+					This line chart compares the Movie and Tv shows contents added to Netflix through the years.
+
+					We can see that more movies have always been added.
+					In 2021, the number of contents added to Netflix for Movies was 277 and 315 Tv shows were added.
+					It shows that for two decades, only Tv Shows were added on Netflix.<br><br>
+
+
+
+
+					<h5>4. Top 5 Directors with most content(Movie and Tv show) on Netflix</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/bestdire.png" alt="Movietype percentage image" class="image main"><br />
+
+					The chart provides insight into the five prominent directors who have their content featured on
+					Netflix. It has also shown directors who have made a significant impact on the platform with their
+					contributions to
+					the world of film and entertainment. This
+					information can be used to award them .<br><br>
+
+					<h5>4(a). Top 10 Directors based on Movie and Tv show</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/bymovishow.png" alt="Movietype percentage image" class="image main"><br />
+					This shows Top 10 directors based on content type (Movie and Tv Show)<br>
+
+					<h5>4(b). Bottom Directors based Movie and Tv show</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/botom.png" alt="Movietype percentage image" class="image main"><br />
+					This also directors with least content on aNetflix.<br><br/>
+
+					<h5> 5. Ratings of Content(Movie and Tv show)</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/toprate.png" alt="Movietype percentage image" class="image main"><br />
+					Ratings are a crucial system used to gauge the appropriateness of a motion picture for specific
+					audiences, taking into account its content. In this chart, we highlight the highest-rated content on
+					Netflix.
+
+					A noteworthy observation is that the majority of content on Netflix carries a TV-MA rating. In the
+					United States, the TV-MA rating, as defined by the TV Parental Guidelines, indicates content
+					intended for Mature Audiences. It signifies that the material may be unsuitable for children under
+					17, containing elements such as strong language, explicit content, and intense violence. This rating
+					serves as a vital indicator for viewers seeking content tailored to more mature sensibilities.
+					<br>
+<br/>
+
+					<h5> 6. Release years with highest Contents</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/yrhighcon.png" alt="Movietype percentage image" class="image main"><br />
+					This chart illustrates the years in which Netflix released the highest number of movies and TV
+					shows. We've specifically focused on the top 10 release years or production years.
+
+					What's evident is that from 2012 to 2018, Netflix consistently added a substantial amount of recent
+					content, ensuring that the quantity of recent releases per year outpaced older releases. However, in
+					2019 and the later years, there was a noticeable decline. While this decline might be attributed to
+					the impact of
+					Covid-19, further analysis would be required to confirm this hypothesis.<br><br/>
+
+					<h5> 7. Number of Content based on Genre</h5>
+					<img src="images/vizmain.png" alt="Movietype percentage image" class="image main">
+					<img src="images/genre.png" alt="Movietype percentage image" class="image main"><br />
+					The chart displays the most prevalent genres on Netflix.
+					It's evident that Drama and International movies, closely followed by Documentary, dominate the
+					content offerings on Netflix within the given timeframe.
+					It also tells which genre needs to be added or removed in the future.<br />
+
+					<br />And with that, I conclude this exercise. As mentioned earlier, this was a valuable opportunity
+					to assess and enhance my skills. Thank you for your engagement.
+
+
+
+
+
+
+
+
+
+					</p>
+				</div>
+
+			</section>
+
+		</div>
+
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form action="https://formsubmit.co/a4f5568d11b2cff550a77f3574a67d90" method="POST">
+						<input name="_next" type="hidden" value="https://rashidproject.000webhostapp.com/appreciation.html">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="#">tobrazunerashid@gmail.com</a>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-phone"></span>
+							<h3>Phone</h3>
+							<span>(+233) 054-694-9160</span>
+						</div>
+					</section>
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<h3>Address</h3>
+							<span>Brofoyedru, AD240<br />
+								Kwabre East, Ashanti<br />
+								Ghana.</span>
+						</div>
+					</section>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<!--<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>-->
+					<li><a href="https://github.com/RashidTobrazune" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/rashid-tobrazune" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; All Rights Reserved.2023.</li>
+					<li>Design: <a href="rashprof.html">Awudu Seidu Rashid Tobrazune</a></li>
+				</ul>
+				<div class="footericon">
+					<a href="#"><img src="images/upvote.svg" width="20" height="20"></a>
+					<!--<span class="animate scrolla" style="--i:13;"></span>-->
+				</div>
+
+			</div>
+
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
